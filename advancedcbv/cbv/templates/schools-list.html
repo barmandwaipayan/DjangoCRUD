@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body_block %}
+<div class="jumbotron">
+
+  <h2>Welcome to the list of all schools.</h2>
+  <br>
+  <ol>
+    {% for school in school_list %}
+    <p><li><a href="school_list/{{school.id}}">{{school.name}}</a></li></p>
+    {% endfor %}
+  </ol>
+</div>
+{% endblock %}
